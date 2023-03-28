@@ -1,0 +1,52 @@
+html {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+  html, body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .logo{
+    text-align: center;
+    background-color: orange;
+    color: white;
+    padding: 0.5em;
+  }
+  
+  #character-bar {
+    height: 15vh;
+    background: green;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 3vh;
+  }
+   
+  .characterInfo{
+    height: 550px;
+    padding: 30px;
+    font-size: 24px;
+    border: solid;
+    text-align: center;
+  }
+  
+  input[type="submit"], button {
+    background-color: green;
+    color: orange;
+    font-size: 18px;
+    border-radius: 6px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+  input[type="text"] {
+    font-size: 3vh;
+    background-color: orange;
+  }
+  
+  #image{
+    width: 300px;
+    height: 300px;
+  }
+  
+  
