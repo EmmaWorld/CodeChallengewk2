@@ -13,7 +13,6 @@ const resetVotes = document.getElementById('reset-btn');
 resetVotes.style.cursor = 'pointer';
 
 
-
 let currentAnimal;
 //adding event listener on the form
 form.addEventListener("submit", (e) => {
@@ -27,15 +26,13 @@ form.addEventListener("submit", (e) => {
 resetVotes.addEventListener('click', () => {
     currentAnimal.votes = 0;
     showAnimal(currentAnimal);
-});
+})
 
-// creating the function showAnimal. 
-// The function then uses the "innerHTML" property to update the content of the HTML elements on the page with information from the "animal" object
 function showAnimal(animal){
     animalName.innerHTML = animal.name;
     image.src = animal.image;
     animalVotes.innerHTML = animal.votes;
-};
+}
 
 //DOM render functions
 function renderCharacters(animal) {
@@ -45,24 +42,16 @@ function renderCharacters(animal) {
     character.appendChild(spanElement)
     spanElement.addEventListener('click', () => {
         currentAnimal = animal;
-        showAnimal (animal);
+        showAnimal(animal);
 })
 }
 
 //fetch requests
 //get fetch for all character resources
 function getCharacters() {
-    fetch('http://localhost:3000/characters')
+    fetch('http://localhost:3000/characters/')
     .then(response => response.json())
     .then(animals => animals.forEach(animal => renderCharacters(animal)))
 }
 
 getCharacters();
-
-// //Initial Render
-// //get data and render our characters to the DOM
-
-// function initialize() {
-//     getCharacters();
-// }
-// initialize()
